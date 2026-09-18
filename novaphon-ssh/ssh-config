@@ -1,0 +1,64 @@
+# =============================================================
+# NOX Lab - DaRemote SSH Config (Novaphon)
+# =============================================================
+# Masold be a DaRemote appba, vagy hasznad referenciaként
+# a DaRemote "Add Server" beallitasokhoz.
+# =============================================================
+
+# --- AUDIT szerver ---
+Host audit
+    HostName 192.168.1.100
+    User audit
+    Port 22
+    IdentityFile ~/.ssh/noxlab_ed25519
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    StrictHostKeyChecking no
+
+# --- NOX szerver (Orchestrator) ---
+Host nox
+    HostName 192.168.1.102
+    User nox
+    Port 22
+    IdentityFile ~/.ssh/noxlab_ed25519
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    StrictHostKeyChecking no
+
+# --- ASSISTANT szerver ---
+Host assistant
+    HostName 192.168.1.129
+    User assistant
+    Port 22
+    IdentityFile ~/.ssh/noxlab_ed25519
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    StrictHostKeyChecking no
+
+# =============================================================
+# Tailscale alternativak (ha nem vagy a helyi halozaton):
+# =============================================================
+
+Host audit-ts
+    HostName audit
+    User audit
+    Port 22
+    IdentityFile ~/.ssh/noxlab_ed25519
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+
+Host nox-ts
+    HostName nox
+    User nox
+    Port 22
+    IdentityFile ~/.ssh/noxlab_ed25519
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+
+Host assistant-ts
+    HostName assistant
+    User assistant
+    Port 22
+    IdentityFile ~/.ssh/noxlab_ed25519
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
