@@ -10,9 +10,9 @@ set -e
 
 KEY_NAME="noxlab_ed25519"
 KEY_PATH="$HOME/.ssh/$KEY_NAME"
-SERVERS=("192.168.1.100" "192.168.1.102" "192.168.1.129")
-USERS=("audit" "nox" "assistant")
-NAMES=("AUDIT" "NOX" "ASSISTANT")
+SERVERS=("192.168.1.100" "192.168.1.102" "192.168.1.129" "192.168.1.101" "192.168.1.103" "192.168.1.134")
+USERS=("audit" "nox" "assistant" "crew" "attack" "victim")
+NAMES=("AUDIT" "NOX" "ASSISTANT" "CREW" "ATTACK" "VICTIM")
 
 echo "======================================"
 echo "  NOX Lab SSH Key Setup"

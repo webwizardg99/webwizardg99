@@ -2,7 +2,7 @@
 # =============================================================
 # NOX Lab - Szerver Elokezites DaRemote-hoz
 # =============================================================
-# Futtasd MINDEN szerveren (AUDIT, NOX, ASSISTANT) root-kent
+# Futtasd MINDEN szerveren (AUDIT, NOX, ASSISTANT, CREW, ATTACK, VICTIM) root-kent
 # hogy az SSH elerheto legyen a telefonrol.
 # =============================================================
 

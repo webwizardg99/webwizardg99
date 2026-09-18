@@ -2,11 +2,14 @@
 
 ## Szerverek
 
-| Nev | LAN IP | Tailscale | User | Port |
-|-----|--------|-----------|------|------|
-| **AUDIT** | `192.168.1.100` | `audit` | `audit` | 22 |
-| **NOX** | `192.168.1.102` | `nox` | `nox` | 22 |
-| **ASSISTANT** | `192.168.1.129` | `assistant` | `assistant` | 22 |
+| Nev | LAN IP | Tailscale | User | Port | Leiras |
+|-----|--------|-----------|------|------|--------|
+| **AUDIT** | `192.168.1.100` | `audit` | `audit` | 22 | Audit/logging szerver |
+| **NOX** | `192.168.1.102` | `nox` | `nox` | 22 | Orchestrator, ShadowBridge |
+| **ASSISTANT** | `192.168.1.129` | `assistant` | `assistant` | 22 | LLM (LM Studio, Ollama) |
+| **CREW** | `192.168.1.101` | `crew` | `crew` | 22 | Crew szerver |
+| **ATTACK** | `192.168.1.103` | `attack` | `attack` | 22 | Metasploit, C2, Villain |
+| **VICTIM** | `192.168.1.134` | `victim` | `victim` | 22 | i686 Kali, intentionally vuln |
 
 ---
 
@@ -68,6 +71,9 @@ ssh-keygen -t ed25519 -f ~/.ssh/noxlab_ed25519 -C "novaphon@noxlab"
 ssh-copy-id -i ~/.ssh/noxlab_ed25519.pub audit@192.168.1.100
 ssh-copy-id -i ~/.ssh/noxlab_ed25519.pub nox@192.168.1.102
 ssh-copy-id -i ~/.ssh/noxlab_ed25519.pub assistant@192.168.1.129
+ssh-copy-id -i ~/.ssh/noxlab_ed25519.pub crew@192.168.1.101
+ssh-copy-id -i ~/.ssh/noxlab_ed25519.pub attack@192.168.1.103
+ssh-copy-id -i ~/.ssh/noxlab_ed25519.pub victim@192.168.1.134
 ```
 
 ### B) DaRemote sajat kulcs generalasa
