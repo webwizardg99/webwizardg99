@@ -1,0 +1,118 @@
+# =============================================================
+# NOX Lab - DaRemote SSH Config (Novaphon)
+# =============================================================
+# Masold be a DaRemote appba, vagy hasznad referenciaként
+# a DaRemote "Add Server" beallitasokhoz.
+# =============================================================
+
+# --- AUDIT szerver ---
+Host audit
+    HostName 192.168.1.100
+    User audit
+    Port 22
+    IdentityFile ~/.ssh/noxlab_ed25519
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    StrictHostKeyChecking no
+
+# --- NOX szerver (Orchestrator) ---
+Host nox
+    HostName 192.168.1.102
+    User nox
+    Port 22
+    IdentityFile ~/.ssh/noxlab_ed25519
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    StrictHostKeyChecking no
+
+# --- ASSISTANT szerver ---
+Host assistant
+    HostName 192.168.1.129
+    User assistant
+    Port 22
+    IdentityFile ~/.ssh/noxlab_ed25519
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    StrictHostKeyChecking no
+
+# --- CREW szerver ---
+Host crew
+    HostName 192.168.1.101
+    User crew
+    Port 22
+    IdentityFile ~/.ssh/noxlab_ed25519
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    StrictHostKeyChecking no
+
+# --- ATTACK szerver (Metasploit, C2, Villain) ---
+Host attack
+    HostName 192.168.1.103
+    User attack
+    Port 22
+    IdentityFile ~/.ssh/noxlab_ed25519
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    StrictHostKeyChecking no
+
+# --- VICTIM szerver (i686 Kali, intentionally vuln) ---
+Host victim
+    HostName 192.168.1.134
+    User victim
+    Port 22
+    IdentityFile ~/.ssh/noxlab_ed25519
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    StrictHostKeyChecking no
+
+# =============================================================
+# Tailscale alternativak (ha nem vagy a helyi halozaton):
+# =============================================================
+
+Host audit-ts
+    HostName audit
+    User audit
+    Port 22
+    IdentityFile ~/.ssh/noxlab_ed25519
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+
+Host nox-ts
+    HostName nox
+    User nox
+    Port 22
+    IdentityFile ~/.ssh/noxlab_ed25519
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+
+Host assistant-ts
+    HostName assistant
+    User assistant
+    Port 22
+    IdentityFile ~/.ssh/noxlab_ed25519
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+
+Host crew-ts
+    HostName crew
+    User crew
+    Port 22
+    IdentityFile ~/.ssh/noxlab_ed25519
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+
+Host attack-ts
+    HostName attack
+    User attack
+    Port 22
+    IdentityFile ~/.ssh/noxlab_ed25519
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+
+Host victim-ts
+    HostName victim
+    User victim
+    Port 22
+    IdentityFile ~/.ssh/noxlab_ed25519
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
